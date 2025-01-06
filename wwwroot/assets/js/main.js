@@ -20,6 +20,10 @@ toggle.onclick = function () {
   main.classList.toggle("active");
 };
 
+function toggleProfileEditForm() {
+    const form = document.getElementById("editProfileForm");
+    form.style.display = form.style.display === "none" ? "block" : "none";
+}
 
 // Highlight selected page in navigation
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,4 +37,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 

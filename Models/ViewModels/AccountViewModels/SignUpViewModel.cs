@@ -11,6 +11,7 @@ namespace WebApplication1.Models.ViewModels.AccountViewModels
         public string Email { get; set; }
         [Required]
         [DataType(DataType.Password)]
+        [MaxLength(100)]
         public string Password { get; set; }
         
     }

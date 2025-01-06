@@ -602,6 +602,79 @@ a {
             .edit-project-form .form-group button:hover {
                 background: #5a54d1; /* Slightly darken the blue color */
             }
+.profile-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--gray);
+    border-radius: 10px;
+}
 
+.profile-details {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--black2);
+}
 
+    .profile-details p {
+        margin: 5px 0;
+    }
 
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-profile-btn {
+    background: var(--blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    .edit-profile-btn:hover {
+        background: #5a54d1; /* Slightly darken the blue color */
+    }
+
+.edit-profile-form {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--gray);
+    border-radius: 10px;
+}
+
+    .edit-profile-form .form-group {
+        margin-bottom: 15px;
+    }
+
+        .edit-profile-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .edit-profile-form .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--black2);
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .edit-profile-form .form-group button {
+            background: var(--blue);
+            color: var(--white);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+            .edit-profile-form .form-group button:hover {
+                background: #5a54d1; /* Slightly darken the blue color */
+            }
+
+/* ...existing code... */

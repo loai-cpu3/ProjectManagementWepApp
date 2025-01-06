@@ -1,0 +1,33 @@
+﻿<div class="content">
+    <div class="profile-section">
+        <h2>Profile</h2>
+        <div class="profile-details">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Role:</strong> Project Manager</p>
+        </div>
+        <div class="profile-actions">
+            <button class="edit-profile-btn" >Edit Profile</button>
+        </div>
+        <div class="edit-profile-form" id="editProfileForm" style="display: none;">
+            <form>
+                <div class="form-group">
+                    <label for="edit-profile-name">Name:</label>
+                    <input type="text" id="edit-profile-name" name="edit-profile-name" value="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-profile-email">Email:</label>
+                    <input type="email" id="edit-profile-email" name="edit-profile-email" value="john.doe@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-profile-role">Role:</label>
+                    <input type="text" id="edit-profile-role" name="edit-profile-role" value="Project Manager" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Save Changes</button>
+                    <button type="button" onclick="toggleProfileEditForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using WebApplication1.Models.ViewModels.AccountViewModels;
@@ -61,6 +62,11 @@ namespace WebApplication1.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+        [Authorize]
+        public IActionResult Profile()
+        {
+            return View();
         }
     }
 }

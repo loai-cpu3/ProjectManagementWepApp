@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="@(ViewData["Title"]?.ToString() == "Dashboard" ? "selected" : "")">
-                    <a asp-controller="Dashboard" asp-action="Index">
+                    <a asp-controller="Home" asp-action="Index">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -29,14 +29,7 @@
                     </a>
                 </li>
 
-                <li class="@(ViewData["Title"]?.ToString() == "Task" ? "selected" : "")">
-                    <a asp-controller="Tasks" asp-action="Index">
-                        <span class="icon">
-                            <ion-icon name="clipboard-outline"></ion-icon>
-                        </span>
-                        <span class="title">Tasks</span>
-                    </a>
-                </li>
+           
 
                 <li class="@(ViewData["Title"]?.ToString() == "Project" ? "selected" : "")">
                     <a asp-controller="Project" asp-action="Index">
@@ -48,7 +41,7 @@
                 </li>
 
                 <li class="@(ViewData["Title"]?.ToString() == "Profile" ? "selected" : "")">
-                    <a asp-controller="Profile" asp-action="Index">
+                    <a asp-controller="Account" asp-action="Profile">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
