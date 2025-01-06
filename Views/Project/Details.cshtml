@@ -1,0 +1,60 @@
+﻿@model Project
+
+<div class="content">
+    <div class="project-content">
+        <div class="project-header">
+            
+            <div class="project-title">
+                <h2 class="project-name">@Model.ProjectName</h2>
+                <span class="project-status">Status: @Model.Status.ToString()</span>
+            </div>
+            <div class="project-actions">
+                <a asp-action="Edit" asp-controller="Project" asp-route-id="@Model.ProjectId"><button class="edit-btn">Edit</button></a>
+                <a asp-action="Delete" asp-controller="Project" asp-route-id="@Model.ProjectId"><button class="delete-btn">Delete</button></a>
+
+            </div>
+        </div>
+        <div class="project-description">
+            <p>@Model.ProjectDescription</p>
+        </div>
+        <div class="project-dates">
+            <p><strong>Start Date:</strong> @Model.StartDate.ToShortDateString()</p>
+            <p><strong>Due Date:</strong> @Model.EndDate.ToShortDateString()</p>
+        </div>
+        <div class="task-columns">
+            <div class="task-column">
+                <div class="task-column-header">
+                    <h2>To Do</h2>
+                    <button class="add-task-btn">+</button>
+                </div>
+                <hr class="separator todo-separator">
+                <div class="task-card">
+                    <h3>Task 1</h3>
+                    <p>Priority: High</p>
+                    <p>Description: This is the first task to be done.</p>
+                </div>
+                <!-- Add more task cards as needed -->
+            </div>
+            <div class="task-column">
+                <h2>In Progress</h2>
+                <hr class="separator inprogress-separator">
+                <div class="task-card">
+                    <h3>Task 2</h3>
+                    <p>Priority: Medium</p>
+                    <p>Description: This task is currently in progress.</p>
+                </div>
+                <!-- Add more task cards as needed -->
+            </div>
+            <div class="task-column">
+                <h2>Completed</h2>
+                <hr class="separator completed-separator">
+                <div class="task-card">
+                    <h3>Task 3</h3>
+                    <p>Priority: Low</p>
+                    <p>Description: This task has been completed.</p>
+                </div>
+                <!-- Add more task cards as needed -->
+            </div>
+        </div>
+    </div>
+</div>

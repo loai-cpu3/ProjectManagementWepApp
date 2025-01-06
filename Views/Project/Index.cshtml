@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Project>
+
+@{
+    ViewData["Title"] = "Project";
+
+}
+<div class="content">
+    <a asp-action="Create" asp-controller="Project">
+    <div class="create-btn">
+        <button>Create New Project</button>
+    </div>
+    </a>
+@if (Model.Count() == 0)
+{
+        <div class="no-projects-message">
+            <p>There are no projects yet. Please create a new project to get started.</p>
+        </div>
+}
+
+else
+{
+    
+    <div class="cards">
+    @foreach(var project in Model)
+    {
+        <a asp-action="Details" asp-controller="Project" asp-route-id="@project.ProjectId">
+            <div class="card">
+                <div class="card-header">
+                    <h3>@project.ProjectName</h3>
+                </div>
+                <div class="card-body">
+                    <p>@project.ProjectDescription</p>
+                </div>
+            </div>
+
+            </a>
+       
+
+    }
+    </div>
+}
+</div>
+
+

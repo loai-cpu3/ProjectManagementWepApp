@@ -1,0 +1,38 @@
+﻿@using WebApplication1.Models.ViewModels
+@model ProjectEditViewModel
+<div class="content">
+<div class="project-content">
+
+    <div class="edit-project-form" id="editProjectForm" >
+        <form asp-action="UpdateProject" asp-controller="Project" method="post">
+            <div class="form-group">
+                <label asp-for="ProjectName"></label>
+                <input  id="edit-project-name" asp-for="ProjectName" value="@Model.ProjectName">
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectDescription"></label>
+                <textarea id="edit-project-description" asp-for="ProjectDescription">@Model.ProjectDescription </textarea>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" id="edit-start-date"></label>
+                    <input asp-for="StartDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" />
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" id="edit-due-date"></label>
+                    <input asp-for="EndDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Status"></label>
+                <select asp-for="@Model.Status" asp-items="@Html.GetEnumSelectList(typeof(ProjectStatus))" id="edit-project-status">
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Save Changes</button>
+                <a asp-action="Details" asp-controller="Project" asp-route-id="@Model.ProjectId"> <button type="button">Cancel</button></a>
+            </div>
+                <input type="hidden" asp-for="ProjectId" value="@Model.ProjectId"  />
+        </form>
+    </div>
+    <div asp-validation-summary="All" style="color :red ; font-weight :700"></div>
+</div>
+</div>
